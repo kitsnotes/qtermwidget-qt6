@@ -62,7 +62,7 @@ Code configuration is handled by CMake. CMake variable `CMAKE_INSTALL_PREFIX` wi
 
 To build, run `make`. To install, run `make install` which accepts variable `DESTDIR` as usual.
 
-To build PyQt bindings, specify an additional CMake option `QTERMWIDGET_BUILD_PYTHON_BINDING=ON` when building this library.
+To build PyQt bindings, build this library first, and then invoke `sip-wheel` in pyqt/ directory. Environment variables `CXXFLAGS` and `LDFLAGS` can be used to specify non-installed or non-standard directories for headers and shared libraries, and the built Python wheel can be installed by standard tools like `pip`. See [.ci/build.sh](.ci/build.sh) for a complete example.
 
 ### Binary packages
 
